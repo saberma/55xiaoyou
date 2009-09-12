@@ -1,5 +1,6 @@
-#db
+#db                                                                                                                                                          
 config/database.yml
+db/schema.rb
 
 #log
 log/**
@@ -20,3 +21,7 @@ coverage/**
 
 #selenium
 vendor/plugins/selenium-on-rails/log/**
+
+#doc
+doc/api
+doc/app
