@@ -1,0 +1,22 @@
+#db
+config/database.yml
+
+#log
+log/**
+*.log
+*.pid
+
+#tmp
+tmp/**
+
+#vim swap file
+**.swp
+**.swo
+**.swn
+**.*~
+
+#rcov
+coverage/**
+
+#selenium
+vendor/plugins/selenium-on-rails/log/**
