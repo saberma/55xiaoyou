@@ -9,10 +9,9 @@ require File.join(File.dirname(__FILE__), 'boot')
 Rails::Initializer.run do |config|
   config.gem 'mysql'
   config.gem 'haml'
-  config.gem 'thoughtbot-shoulda', :lib => 'shoulda'
-  config.gem 'thoughtbot-factory_girl', :lib => 'factory_girl'
-  config.gem "rspec", :lib => 'spec'
-  config.gem "rspec-rails", :lib => 'spec/rails'
+  config.gem 'thoughtbot-factory_girl', :lib => false
+  config.gem "rspec", :lib => false
+  config.gem "rspec-rails", :lib => false
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
   # -- all .rb files in that directory are automatically loaded.
