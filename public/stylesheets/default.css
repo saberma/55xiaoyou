@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+#toolbar {
+  height: 35px;
+  background: url(/images/toolbar-bg.png) repeat-x;
+  padding: 6px 8px; }
+  #toolbar .next {
+    float: left;
+    height: 23px;
+    width: 68px;
+    background-position: left top;
+    background: url(/images/next.png) repeat-x; }
+    #toolbar .next:hover {
+      background-position: left bottom; }

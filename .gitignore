@@ -25,3 +25,7 @@ vendor/plugins/selenium-on-rails/log/**
 #doc
 doc/api
 doc/app
+
+#bundle-fu
+public/javascripts/cache
+public/stylesheets/cache
