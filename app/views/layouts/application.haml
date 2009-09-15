@@ -4,17 +4,16 @@
   %head
     %meta{'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8'}
     %title=@title
-    -bundle do
-      =stylesheet_link_tag "blueprint/screen"
-      / [if lt IE 8]
-        =stylesheet_link_tag "blueprint/ie"
-      =stylesheet_link_tag "facebox", "default" 
-      =javascript_include_tag "jquery", "jrails", "facebox", "application" 
+    =stylesheet_link_tag "blueprint/screen"
+    / [if lt IE 8]
+      =stylesheet_link_tag "blueprint/ie"
+    =stylesheet_link_tag "default" 
+    =javascript_include_tag "jquery", "jrails", "swfobject", "application" 
 
   %body
+    #toolbar
+      =link_to_function '', 'Game.next()', :class => 'next'
     .container
-      #toolbar
-        =link_to_function '', 'Game.next()', :class => 'next'
       #content.span-19
         =yield
       #footer.span-19

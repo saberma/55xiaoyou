@@ -10,5 +10,10 @@ Screw.Unit(function(){
     it("should get next url", function(){
       expect(Games.next()).to(equal, "/games/1");
     });
+
+    it("should show history"), function(){
+      var history_json = {};
+      expect(Games.history()).to(equal, history_json);
+    });
   });
 });

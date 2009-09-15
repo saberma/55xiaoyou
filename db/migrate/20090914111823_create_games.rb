@@ -3,6 +3,7 @@ class CreateGames < ActiveRecord::Migration
     create_table :games do |t|
       t.string :name, :null => false, :size => 20, :comment => '名称'
       t.string :description, :size => 500, :comment => '描述'
+      t.string :url, :null => false, :size => 50, :comment => '地址'
 
       t.timestamps
     end

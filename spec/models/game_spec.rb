@@ -4,7 +4,8 @@ describe Game do
   before(:each) do
     @valid_attributes = {
       :name => "猫狗大战",
-      :description => "经典小游戏"
+      :description => "经典小游戏",
+      :url => "test.swf"
     }
   end
 
