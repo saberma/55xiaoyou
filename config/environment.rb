@@ -9,6 +9,7 @@ require File.join(File.dirname(__FILE__), 'boot')
 Rails::Initializer.run do |config|
   config.gem 'mysql'
   config.gem 'haml'
+  config.gem "RedCloth"
   config.gem 'thoughtbot-factory_girl', :lib => false
   config.gem "rspec", :lib => false
   config.gem "rspec-rails", :lib => false

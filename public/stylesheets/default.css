@@ -1,6 +1,14 @@
 body {
   margin: 0;
   padding: 0; }
+  body * {
+    font-size: 12px; }
+
+.tip {
+  color: #cccccc; }
+
+.center_text {
+  text-align: center; }
 
 #toolbar {
   height: 35px;
@@ -14,3 +22,6 @@ body {
     background: url(/images/next.png) repeat-x; }
     #toolbar .next:hover {
       background-position: left bottom; }
+
+#title {
+  font-size: 36px; }

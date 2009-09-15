@@ -1,6 +1,11 @@
-.span-13
-  %h1=@game.name
-  =swf_tag @game.url
+.span-18
+  .center_text
+    %span.tip 您正玩
+    %span#title=@game.name
+    %span.tip 游戏说明在那==>
+  =swf_tag @game.url, :id => 'game_bg', :width => 720, :height => 540
 
 .span-6.last
-  .description=@game.description
+  .wikistyle
+    %h3 游戏说明
+    .description=RedCloth.new(@game.description).to_html
