@@ -4,16 +4,17 @@
   %head
     %meta{'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8'}
     %title=@title
-    -bundle do
-      =stylesheet_link_tag "blueprintcss/screen"
-      / [if lt IE 8]
-        =stylesheet_link_tag "blueprintcss/ie"
-      =stylesheet_link_tag "wikistyle", "default" 
-      =javascript_include_tag "jquery", "jrails", "jquery.cookies", "swfobject", "application" 
+    =stylesheet_link_tag "blueprintcss/screen"
+    / [if lt IE 8]
+      =stylesheet_link_tag "blueprintcss/ie"
+    =stylesheet_link_tag "wikistyle", "default" 
+    =javascript_include_tag "jquery", "jrails", "jquery.cookies", "swfobject", "histories", "games", "application" 
 
   %body
     #toolbar
-      =link_to_function '', 'Game.next()', :class => 'next'
+      =link_to '', home_path, :class => 'next'
+      %span 最近玩过:
+      %ul#history
     .container
       #content.span-24
         =yield

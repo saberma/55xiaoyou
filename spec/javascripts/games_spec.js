@@ -1,5 +1,7 @@
 require("spec_helper.js");
 require("../../public/javascripts/games.js");
+//init
+MAX_GAME_ID = 1;
 
 Screw.Unit(function(){
   describe("Game", function(){
@@ -8,7 +10,7 @@ Screw.Unit(function(){
     });
 
     it("should get next url", function(){
-      expect(Game.next()).to(equal, "/games/1");
+      expect(Game.nextUrl()).to(equal, "/games/1");
     });
   });
 });

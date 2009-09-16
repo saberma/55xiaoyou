@@ -4,9 +4,10 @@ namespace :db do
     task :load => :environment do
       require 'factory_girl'
       require 'spec/factories'
-
-      [Game].map(&:delete_all)
-      Factory(:game)
+      #make sure id start with 1
+      system "rake db:migrate:reset"
+      
+      20.times { Factory(:game) }
     end
   end
 end

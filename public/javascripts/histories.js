@@ -1,8 +1,9 @@
 var History = { 
+
   outer_tag: '__',
   inner_tag: '::',
   cookie_name: 'histories',
-  max: 10,
+  max: 8,
 
   serial: function(array){
     return $.map(array,function(obj){
@@ -28,15 +29,18 @@ var History = {
 
   add: function(array){
     var histories = this.get();
-    if(histories.length >= this.max){
-      print('====');
-      print(histories);
-      histories.pop();
-      print(histories);
-      print('====');
+    if(histories.length != 0){
+      var histories_id = $.map(histories, function(n){ return n[0] });
+      if($.inArray(array[0], histories_id)>=0){
+        return this;
+      }
     }
-    histories.push(array); 
+    if(histories.length >= this.max){
+      histories.pop();
+    }
+    histories.unshift(array); 
     this.set(histories);
+    return this;
   },
 
 };

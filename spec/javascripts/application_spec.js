@@ -1,14 +1,23 @@
 require("spec_helper.js");
+require("../../public/javascripts/jquery.cookies.js");
+require("../../public/javascripts/histories.js");
+require("../../public/javascripts/games.js");
+
+//init
+MAX_GAME_ID = 1;
+require("fixtures/histories.js");
+History.add(first).add(second);
+
 require("../../public/javascripts/application.js");
 
 Screw.Unit(function(){
   describe("Your application javascript", function(){
-    it("does something", function(){
-      expect("hello").to(equal, "hello");
+    it("init next", function(){
+      expect($('.next').attr('href')).to(equal, "/games/1");
     });
 
-    it("accesses the DOM from fixtures/application.html", function(){
-      expect($('.select_me').length).to(equal, 2);
+    it("show history", function(){
+      expect($('#history li').length).to(equal, 2);
     });
   });
 });
