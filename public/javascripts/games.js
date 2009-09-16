@@ -1,6 +1,6 @@
 MAX_GAME_ID = 1;
 
-var Games = {
+var Game = {
   next:function(){
     return "/games/" + this.randomId();
   },
