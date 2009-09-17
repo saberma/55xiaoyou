@@ -25,6 +25,12 @@ ul {
 .center_text {
   text-align: center; }
 
+.float_right {
+  float: right; }
+
+.float_left {
+  float: left; }
+
 .next {
   float: left;
   height: 23px;
