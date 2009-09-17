@@ -1,3 +1,15 @@
+admin = lambda do
+  if u = User.find_by_login('admin')
+    return u
+  end
+  Factory(:user)
+end
+
+Factory.define :user do |u|
+  u.login 'admin'
+  u.password '55xiaoyou'
+end
+
 Factory.define :game do |g|
   g.name "猫狗大战" 
   g.description %Q(
@@ -9,4 +21,6 @@ Factory.define :game do |g|
     # 砸中了，对方最上方的生命线会减少，减少为0时，你就获胜了
   )
   g.url "http://www.9654.com/flash/115.swf"
+  g.creator &admin
+  g.modifier &admin
 end
