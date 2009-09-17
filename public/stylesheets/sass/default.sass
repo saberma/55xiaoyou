@@ -1,5 +1,6 @@
-!front_color_light = #ffffff
-!border_color = #cccccc
+!black_color = #000
+!front_color_light = #fff
+!border_color = #ccc
 
 body
   :margin 0
@@ -9,6 +10,7 @@ body
 
 a
   :text-decoration none
+  :color = !black_color
 
 ul
   :margin 0px 
@@ -51,6 +53,14 @@ ul
     :width 150px
     :background url(/images/logo.png) no-repeat
 
+#content
+  #title
+    :font-size 36px
 
-#title
-  :font-size 36px
+#footer, #footer_side
+  :text-align center
+  :margin-top 20px
+  div
+    :margin 5px
+  a
+    :margin 5px

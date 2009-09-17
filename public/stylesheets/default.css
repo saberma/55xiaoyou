@@ -5,7 +5,8 @@ body {
     font-size: 12px; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #000000; }
 
 ul {
   margin: 0px;
@@ -44,5 +45,13 @@ ul {
     width: 150px;
     background: url(/images/logo.png) no-repeat; }
 
-#title {
+#content #title {
   font-size: 36px; }
+
+#footer, #footer_side {
+  text-align: center;
+  margin-top: 20px; }
+  #footer div,   #footer_side div {
+    margin: 5px; }
+  #footer a,   #footer_side a {
+    margin: 5px; }
