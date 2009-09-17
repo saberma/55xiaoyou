@@ -24,22 +24,25 @@ ul {
 .center_text {
   text-align: center; }
 
+.next {
+  float: left;
+  height: 23px;
+  width: 68px;
+  background: url(/images/next.png) repeat-x; }
+
 #toolbar {
   height: 35px;
   background: url(/images/toolbar-bg.png) repeat-x;
   padding: 6px 8px; }
-  #toolbar .next {
-    float: left;
-    height: 23px;
-    width: 68px;
-    background-position: left top;
-    background: url(/images/next.png) repeat-x; }
-    #toolbar .next:hover {
-      background-position: left bottom; }
-  #toolbar span {
+  #toolbar .history_label {
     float: left;
     margin: 2px 2px 2px 30px;
     color: #cccccc; }
+  #toolbar .logo {
+    float: right;
+    height: 23px;
+    width: 150px;
+    background: url(/images/logo.png) no-repeat; }
 
 #title {
   font-size: 36px; }

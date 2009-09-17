@@ -13,8 +13,9 @@
   %body
     #toolbar
       =link_to '', home_path, :class => 'next'
-      %span 最近玩过:
+      %span.history_label 最近玩过:
       %ul#history
+      =link_to '', home_path, :class => 'logo'
     .container
       #content.span-24
         =yield

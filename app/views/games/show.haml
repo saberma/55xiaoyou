@@ -11,4 +11,6 @@
 .span-6.last
   .wikistyle
     %h3 游戏说明
-    .description=RedCloth.new(@game.description).to_html
+    .description
+      :textile
+        #{@game.description}
