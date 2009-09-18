@@ -1,4 +1,4 @@
-假如 /有一个管理员(.+)/ do |login|
+Before do
   Factory(:admin)
 end
 
@@ -12,4 +12,8 @@ end
 
 假如 /我已经以管理员(.*)身份登录/ do |login|
   假如 "我已经以用户#{login},密码55xiaoyou登录"
+end
+
+假如 /有一个小游戏/ do
+  Factory(:game)
 end

@@ -6,6 +6,8 @@
     url = logout_path
   when "登录"
     url = login_path
+  when "游戏列表"
+    url = games_path
   end
   raise 'visit url is blank' if url.blank?
   visit url
@@ -67,7 +69,7 @@ end
   hashes.rows.each_with_index do |row, i|
     row.each_with_index do |cell, j|
       response.should have_selector("tbody > tr:nth-child(#{i+1}) > td:nth-child(#{j+1})") do |td|
-        text = td.inner_text
+        text = td.inner_text.strip
         text.should == cell
       end
     end

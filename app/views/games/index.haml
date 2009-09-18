@@ -1,14 +1,20 @@
+.nav=link_to '新增游戏', new_game_path
 %table
   %thead
     %tr
-      %th name
-      %th description
-      %th &nbsp;
+      %th=t('activerecord.attributes.game.name')
+      %th=t('activerecord.attributes.game.description')
+      %th{:colpan=>2} &nbsp;
 
   %tbody
     -@page.each do |game|
-    %tr
-      %td=game.name
-      %td=game.description
+      %tr
+        %td=game.name
+        %td
+          :textile
+            #{game.description}
+        %td
+          =link_to '预览', show_page(game), :target => '_blank'
+          =link_to '修改', edit_game_path(game)
 
 =will_paginate @page

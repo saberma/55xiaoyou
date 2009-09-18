@@ -15,6 +15,14 @@ Factory.define :admin, :parent => :user do |u|
 end
 
 Factory.define :game do |g|
+  g.name "小游戏" 
+  g.description "小游戏说明"
+  g.url "http://www.9654.com/flash/115.swf"
+  g.creator &admin
+  g.modifier &admin
+end
+
+Factory.define :cat_and_dog, :parent => :game do |g|
   g.name "猫狗大战" 
   g.description %Q(
     非常经典的对战小游戏,控制猫(狗)将东西砸向对方，直到对方生命线消耗完，获胜
@@ -25,6 +33,4 @@ Factory.define :game do |g|
     # 砸中了，对方最上方的生命线会减少，减少为0时，你就获胜了
   )
   g.url "http://www.9654.com/flash/115.swf"
-  g.creator &admin
-  g.modifier &admin
 end

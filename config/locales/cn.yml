@@ -11,6 +11,7 @@ cn:
         password: "请输入密码"
       game:
         name: "名称"
+        url: "Flash地址"
         description: "说明"
 
     errors:

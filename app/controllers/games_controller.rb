@@ -2,7 +2,7 @@ class GamesController < ApplicationController
   before_filter :check_login, :except => :show
 
   def index
-    Game.paginate :page => params[:page]
+    @page  = Game.paginate :page => params[:page]
   end
 
   def show
@@ -16,13 +16,19 @@ class GamesController < ApplicationController
 
   def edit
     @game = Game.find(params[:id])
+    render :action => :new
   end
 
   def create
-    @game = Game.create(params[:game])
+    @game = Game.create(
+      params[:game].merge(
+        :creator => current_user,
+        :modifier => current_user
+      )
+    )
     if @game.errors.empty?
-      flash[:notice] = '新增成功!'
-      redirect_to edit_game_path(@game)
+      flash[:notice] = '新增成功!可以继续新增!'
+      redirect_to new_game_path
     else
       flash[:error] = '新增出错!'
       render :action => :new
@@ -30,13 +36,13 @@ class GamesController < ApplicationController
   end
 
   def update
-    @game = Game.find(params[:game])
+    @game = Game.find(params[:id])
     if @game.update_attributes(params[:game])
-      flash[:notice] = '更新成功!'
-      redirect_to edit_game_path(@game)
+      flash[:notice] = '修改成功!'
+      redirect_to games_path
     else
-      flash[:error] = '更新出错!'
-      render :action => :edit
+      flash[:error] = '修改出错!'
+      render :action => :new
     end
   end
 end

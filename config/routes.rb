@@ -8,8 +8,8 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resource :session, :path_prefix => :admin
 
-  map.resources :games, :only => :show
   map.resources :games, :path_prefix => :admin, :except => :show
+  map.resources :games, :only => :show
 
   map.home '/', :controller => 'home'
 

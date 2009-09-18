@@ -1,9 +1,11 @@
+.nav=link_to '返回列表', games_path
 -form_for @game do |f|
-  .row
-    =f.label_require :name
-    =f.text_field :name
-  .row
-    =f.label_require :description
-    =f.text_area :description
+  .label=f.label_require :name
+  .input=f.text_field :name
+  .label=f.label_require :url
+  .input=f.text_field :url
+  .label=f.label_require :description
+  .input=f.text_area :description
 
-  =submit_tag, '保存'
+  =submit_tag '保存'
+  =link_to '返回列表', games_path

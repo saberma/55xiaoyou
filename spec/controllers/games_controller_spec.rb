@@ -29,7 +29,7 @@ describe GamesController do
 
       it "should be success" do
         lambda do
-          post :create, @attributes
+          post :create, :game => @attributes
           assigns[:game].name.should_not be_nil
         end.should change(Game, :count).by(1)
       end
@@ -37,7 +37,7 @@ describe GamesController do
 
     describe "edit game" do
       it "should show edit page" do
-        get :edit
+        get :edit, :id => @game.id
         assigns[:game].new_record?.should be_false
       end
 
