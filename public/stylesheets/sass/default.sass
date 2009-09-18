@@ -24,6 +24,7 @@ ul
     a
       :color = !border_color
 
+//常用样式
 .tip
   :color = !border_color 
 
@@ -43,6 +44,7 @@ ul
   :width 68px
   :background url(/images/next.png) repeat-x
 
+//页面顶端工具条
 #toolbar
   :height 35px
   :background url(/images/toolbar-bg.png) repeat-x
@@ -63,10 +65,13 @@ ul
   #title
     :font-size 36px
 
-#footer, #footer_side
+#footer
   :text-align center
   :margin-top 20px
+  div, a
+    :margin 5px
+
+#footer_side
+  :margin-top 20px
   div
-    :margin 5px
-  a
-    :margin 5px
+    :margin 2px

@@ -2,12 +2,16 @@ admin = lambda do
   if u = User.find_by_login('admin')
     return u
   end
-  Factory(:user)
+  Factory(:admin)
 end
 
 Factory.define :user do |u|
-  u.login 'admin'
+  u.login 'ben'
   u.password '55xiaoyou'
+end
+
+Factory.define :admin, :parent => :user do |u|
+  u.login 'admin'
 end
 
 Factory.define :game do |g|

@@ -54,10 +54,13 @@ ul {
 #content #title {
   font-size: 36px; }
 
-#footer, #footer_side {
+#footer {
   text-align: center;
   margin-top: 20px; }
-  #footer div,   #footer_side div {
+  #footer div, #footer a {
     margin: 5px; }
-  #footer a,   #footer_side a {
-    margin: 5px; }
+
+#footer_side {
+  margin-top: 20px; }
+  #footer_side div {
+    margin: 2px; }

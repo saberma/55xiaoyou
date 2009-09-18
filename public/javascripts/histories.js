@@ -41,7 +41,7 @@ var History = {
     histories.unshift(array); 
     this.set(histories);
     return this;
-  },
+  }
 
 };
 

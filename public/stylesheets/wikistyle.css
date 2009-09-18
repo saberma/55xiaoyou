@@ -17,7 +17,8 @@
     border-top: 4px solid #e0e0e0!important;
     padding-top: .5em!important; }
   .wikistyle h3 {
-    margin-top: 1.5em!important; }
+    margin-top: 0.8em!important;
+    margin-bottom: 0.5em!important; }
   .wikistyle p {
     margin: 1em 0!important;
     line-height: 1.5em!important; }
@@ -27,11 +28,11 @@
     margin-bottom: 0!important; }
   .wikistyle ol {
     margin: 1em 0 1em 1.5em!important; }
-    .wikistyle ol ol {
+    .wikistyle ol li {
       margin-top: 0!important;
       margin-bottom: 0!important; }
   .wikistyle div {
-    margin: 1em 0!important;
+    margin: 0.1em 0!important;
     background-color: #f8f8ff!important;
     border: 1px solid #dedede!important;
     padding: .5em!important;

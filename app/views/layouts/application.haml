@@ -18,6 +18,8 @@
       =link_to '', home_path, :class => 'logo'
     .container
       #content.span-24
+        -flash.each do |key, msg|                                                                                                                                 
+          =content_tag :div, msg, :id => "flash-#{key}"
         =yield
       #footer.span-18
         .links
@@ -37,6 +39,6 @@
         .tip
           想玩下一个游戏了?请点击左上角的按钮!
         .feedback
-          小游群:85215073
           =link_to "意见反馈", "http://qun.qq.com", :target=>"_blank"
           =link_to "游戏推荐", "http://qun.qq.com", :target=>"_blank"
+          小游群:61113516

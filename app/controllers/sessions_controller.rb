@@ -2,6 +2,7 @@
 class SessionsController < ApplicationController
   # Be sure to include AuthenticationSystem in Application Controller instead
   include AuthenticatedSystem
+  skip_before_filter :check_login
 
   def new
   end
@@ -17,7 +18,7 @@ class SessionsController < ApplicationController
       self.current_user = user
       new_cookie_flag = (params[:remember_me] == "1")
       handle_remember_cookie! new_cookie_flag
-      redirect_back_or_default('/admin')
+      redirect_back_or_default(admin_path)
       flash[:notice] = "登录成功!"
     else
       note_failed_signin
@@ -36,7 +37,7 @@ class SessionsController < ApplicationController
 protected
   # Track failed login attempts
   def note_failed_signin
-    flash[:error] = "用户名或密码错误!"
+    flash[:error] = "登录失败,昵称或密码错误!"
     logger.warn "Failed login for '#{params[:login]}' from #{request.remote_ip} at #{Time.now.utc}"
   end
 end

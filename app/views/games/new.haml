@@ -1,0 +1,9 @@
+-form_for @game do |f|
+  .row
+    =f.label_require :name
+    =f.text_field :name
+  .row
+    =f.label_require :description
+    =f.text_area :description
+
+  =submit_tag, '保存'

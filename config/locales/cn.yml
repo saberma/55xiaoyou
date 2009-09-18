@@ -9,6 +9,9 @@ cn:
       user:
         login: "请先输入你的昵称"
         password: "请输入密码"
+      game:
+        name: "名称"
+        description: "说明"
 
     errors:
       template:

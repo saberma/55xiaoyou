@@ -10,6 +10,8 @@ Rails::Initializer.run do |config|
   config.gem 'mysql'
   config.gem 'haml'
   config.gem "RedCloth"
+  config.gem 'mislav-will_paginate', :lib => 'will_paginate'
+
   config.gem 'thoughtbot-factory_girl', :lib => false
   config.gem "rspec", :lib => false
   config.gem "rspec-rails", :lib => false
@@ -43,5 +45,5 @@ Rails::Initializer.run do |config|
 
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
-  # config.i18n.default_locale = :de
+  config.i18n.default_locale = :cn
 end
