@@ -7,7 +7,7 @@ namespace :db do
       #make sure id start with 1
       system "rake db:migrate:reset"
       
-      20.times { Factory(:game) }
+      20.times { Factory(:cat_and_dog) }
     end
   end
 end

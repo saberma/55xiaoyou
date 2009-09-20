@@ -15,7 +15,7 @@ var Share = {
   },
 
   baidu: function(url,title){
-    var u='http://cang.baidu.com/do/add?c=&fr=ien#nw=1&iu='+url+'&it='+encodeURIComponent(title);
+    var u='http://cang.baidu.com/do/add?iu='+encodeURIComponent(url)+'&it='+encodeURIComponent(title) + '&dc=&fr=ien#nw=1';
     window.open(u,'baidu','toolbar=0,resizable=1,scrollbars=yes,status=1,width=450,height=430');
     void(0);
   },
