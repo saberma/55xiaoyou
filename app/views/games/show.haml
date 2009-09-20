@@ -7,6 +7,7 @@
     %span#title=@game.name
     %span.tip 游戏说明在那==>
   =swf_tag @game.url, :id => 'game_bg', :width => 720, :height => 540
+  .tip 游戏文件较大，请等候
 
 .span-6.last
   .shareit.float_right= render :partial => 'home/shareit', :locals => { :path => game_url(@game), :title => "好玩的在线小游戏:#{@game.name} 小游网", :show => "收藏分享#{@game.name}"}

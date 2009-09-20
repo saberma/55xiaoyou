@@ -1,11 +1,25 @@
 .nav=link_to '返回列表', games_path
--form_for @game do |f|
-  .label=f.label_require :name
-  .input=f.text_field :name
-  .label=f.label_require :url
-  .input=f.text_field :url
-  .label=f.label_require :description
-  .input=f.text_area :description
+.span-18
+  -form_for @game do |f|
+    .label=f.label_require :name
+    .input=f.text_field :name
+    .label=f.label_require :url
+    .input=f.text_field :url
+    .label=f.label_require :description
+    .input=f.text_area :description
 
-  =submit_tag '保存'
-  =link_to '返回列表', games_path
+    =submit_tag '保存'
+    =link_to '返回列表', games_path
+
+.span-6.last
+  .wikistyle
+    %h3 怎么写游戏说明?
+    .description
+      :textile
+        说明的内容应包含以下内容:
+        # 什么类型的游戏
+        # 获胜标准
+        # 怎么开始
+        # 怎么操作
+      
+        提示:#号加空格，会被替换为行号
