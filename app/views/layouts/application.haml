@@ -4,11 +4,13 @@
   %head
     %meta{'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8'}
     %title=@title
-    =stylesheet_link_tag "blueprintcss/screen"
-    / [if lt IE 8]
-      =stylesheet_link_tag "blueprintcss/ie"
-    =stylesheet_link_tag "wikistyle", "default" 
-    =javascript_include_tag "jquery", "jrails", "jquery.cookies", "swfobject", "histories", "games", "share", "application" 
+    =javascript_include_tag "/games/max.js"
+    -bundle do
+      =stylesheet_link_tag "blueprintcss/screen"
+      / [if lt IE 8]
+        =stylesheet_link_tag "blueprintcss/ie"
+      =stylesheet_link_tag "wikistyle", "default" 
+      =javascript_include_tag "jquery", "jrails", "jquery.cookies", "swfobject", "histories", "games", "share", "application" 
 
   %body
     #toolbar

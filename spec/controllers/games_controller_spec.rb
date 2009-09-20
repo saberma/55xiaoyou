@@ -11,6 +11,11 @@ describe GamesController do
     assigns[:game].should_not be_nil
   end
 
+  it "should get games max id" do
+    get :max
+    response.should be_success
+  end
+
   describe "admin logged in" do
     before(:each)do
       login_as :admin

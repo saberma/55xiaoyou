@@ -1,5 +1,3 @@
-MAX_GAME_ID = 20;
-
 var Game = {
 
   nextUrl:function(){

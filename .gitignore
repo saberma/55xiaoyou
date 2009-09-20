@@ -29,3 +29,6 @@ doc/app
 #bundle-fu
 public/javascripts/cache
 public/stylesheets/cache
+
+#cache
+public/games/**
