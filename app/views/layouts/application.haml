@@ -27,6 +27,7 @@
         .links
           友情链接:
           =link_to "真心话网", "http://www.55true.com", :target=>"_blank"
+          =link_to "520网址之家", "http://abc.520.com", :target=>"_blank"
           =link_to "滋味网", "http://www.ziwee.cn", :target=>"_blank"
           =link_to "4399", "http://www.4399.net", :target=>"_blank"
           =link_to "7k7k小游戏", "http://www.7k7k.com", :target=>"_blank"
@@ -41,6 +42,11 @@
         .tip
           想玩下一个游戏了?请点击左上角的按钮!
         .feedback
-          =link_to "意见反馈", "http://qun.qq.com", :target=>"_blank"
-          =link_to "游戏推荐", "http://qun.qq.com", :target=>"_blank"
+          =link_to "意见反馈", "http://qun.qq.com/air/#61113516/bbs/view/cd/2/td/1", :target=>"_blank"
+          =link_to "游戏推荐", "http://qun.qq.com/air/#61113516/bbs/view/cd/2/td/2", :target=>"_blank"
           小游群:61113516
+        - if production?
+          =javascript_include_tag "http://js.users.51.la/3215065.js"
+          %noscript
+            %a{:href=>"http://www.51.la/?3215065", :target=>"_blank"}
+              %img{:alt=>"&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;", :src=>"http://img.users.51.la/3215065.asp", :style=>"border:none"}

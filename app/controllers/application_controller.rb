@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
 
   private
   def init_title
-    @title = "小游网 | 在线小游戏,一个接一个,简单,好玩"
+    @title = "小游网 | 最休闲的在线小游戏网站"
   end
 
   def check_login
