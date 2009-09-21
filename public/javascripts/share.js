@@ -2,7 +2,6 @@
 var Share = {
 
   douban: function(url,title){
-    alert('in');
     var u='http://www.douban.com/recommend/?url='+url+'&title='+encodeURIComponent(title);
     window.open(u,'douban','toolbar=0,resizable=1,scrollbars=yes,status=1,width=450,height=330');
     void(0);
