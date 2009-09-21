@@ -1,0 +1,10 @@
+--- 
+user: app_55xiaoyou
+group: app_55xiaoyou
+cwd: /var/www/55xiaoyou/current
+log_file: /var/www/55xiaoyou/shared/log/mongrel.log
+port: "8000"
+environment: production
+address: 127.0.0.1
+pid_file: /var/www/55xiaoyou/shared/pids/mongrel.pid
+servers: 2
