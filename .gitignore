@@ -32,3 +32,6 @@ public/stylesheets/cache
 
 #cache
 public/games/**
+
+#sitemap
+public/sitemap*
