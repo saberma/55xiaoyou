@@ -64,6 +64,8 @@ ul {
   margin-top: 20px; }
   #footer_side div {
     margin: 2px; }
+  #footer_side a {
+    display: none; }
 
 .nav {
   float: right; }
