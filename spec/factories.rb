@@ -34,3 +34,16 @@ Factory.define :cat_and_dog, :parent => :game do |g|
   )
   g.url "http://www.9654.com/flash/115.swf"
 end
+
+Factory.define :gold, :parent => :game do |g|
+  g.name "黄金矿工" 
+  g.description %Q(
+    游戏规则:将锚抛出，不断地拉回黄金，黄金总数超过关卡指定的数额即可通关(键盘操作)
+    #. 游戏开始后，画面中间的锚会左右摆动
+    ##. 当摆动的角度指向你要拿的黄金，
+    ##. 按向下键,锚就会抛出去了
+    ##. 通关后会有机会购买一些物品
+    ##. 按向上键,即要使用物品
+  )
+  g.url "http://docite.com/blog/wp-content/uploads/2008/08/3872098523.swf"
+end

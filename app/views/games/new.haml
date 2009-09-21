@@ -1,4 +1,5 @@
 .nav=link_to '返回列表', games_path
+=error_messages_for :game
 .span-18
   -form_for @game do |f|
     .label=f.label_require :name
