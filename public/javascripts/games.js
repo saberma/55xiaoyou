@@ -1,7 +1,7 @@
 var Game = {
 
   nextUrl:function(){
-    return "/games/" + this.randomId();
+    return "/game/" + this.randomId();
   },
 
   //range:[1,max_game_id]

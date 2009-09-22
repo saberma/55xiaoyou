@@ -10,7 +10,7 @@ Screw.Unit(function(){
     });
 
     it("should get next url", function(){
-      expect(Game.nextUrl()).to(equal, "/games/1");
+      expect(Game.nextUrl()).to(equal, "/game/1");
     });
   });
 });
