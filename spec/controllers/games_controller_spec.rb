@@ -12,7 +12,7 @@ describe GamesController do
   end
 
   it "should get games max id" do
-    get :max
+    get :max, :format => :js
     response.should be_success
   end
 
