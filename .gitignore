@@ -36,3 +36,6 @@ public/index*
 
 #sitemap
 public/sitemap*
+
+#swf_fu
+public/swfs
