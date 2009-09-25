@@ -1,5 +1,5 @@
 # Set the host name for URL creation
-SitemapGenerator::Sitemap.default_host = "http://www.example.com"
+SitemapGenerator::Sitemap.default_host = "http://www.55xiaoyou.com"
 
 SitemapGenerator::Sitemap.add_links do |sitemap|
   # Put links creation logic here.
@@ -21,7 +21,7 @@ SitemapGenerator::Sitemap.add_links do |sitemap|
 
   # add all game
   Game.all.each do |g|
-    sitemap.add game_path(g), :lastmod => g.updated_at
+    sitemap.add show_game_path(g), :lastmod => g.updated_at
   end
 
   # add merchant path
