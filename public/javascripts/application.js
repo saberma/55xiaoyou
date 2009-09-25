@@ -14,6 +14,6 @@ $(document).ready(function(){
     var id = n[0];
     var name = n[1];
     li = $('<li/>').appendTo($('#history'));
-    $('<a/>').html(name).attr('href', '/games/' + id).appendTo(li);
+    $('<a/>').html(name).attr('href', '/game/' + id).appendTo(li);
   });
 });

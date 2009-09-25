@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
       self.current_user = user
       new_cookie_flag = (params[:remember_me] == "1")
       handle_remember_cookie! new_cookie_flag
-      redirect_to admin_path
+      redirect_to member_path
       flash[:notice] = "登录成功!"
     else
       note_failed_signin
