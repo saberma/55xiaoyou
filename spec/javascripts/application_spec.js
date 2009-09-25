@@ -13,7 +13,7 @@ require("../../public/javascripts/application.js");
 Screw.Unit(function(){
   describe("Your application javascript", function(){
     it("init next", function(){
-      expect($('.next').attr('href')).to(equal, "/games/1");
+      expect($('.next').attr('href')).to(equal, "/game/1");
     });
 
     it("show history", function(){
