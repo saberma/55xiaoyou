@@ -37,3 +37,11 @@ namespace :deploy do
     top.deprec.app.restart
   end
 end
+
+after :deploy do
+  puts 'refresh sitemap'
+  run("cd #{deploy_to}/current; #{fetch(:rake, "rake")} sitemap:refresh:no_ping RAILS_ENV=#{fetch(:rails_env, "production")}")
+
+  puts 'get swfs'
+  run("cd #{deploy_to}/current; script/swf_get #{fetch(:rails_env, "production")}")
+end
