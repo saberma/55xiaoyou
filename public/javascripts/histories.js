@@ -1,3 +1,5 @@
+$.cookies.setOptions({hoursToLive: 32767});
+
 var History = { 
 
   outer_tag: '__',

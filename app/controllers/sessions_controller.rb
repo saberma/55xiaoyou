@@ -16,7 +16,8 @@ class SessionsController < ApplicationController
       # button. Uncomment if you understand the tradeoffs.
       # reset_session
       self.current_user = user
-      new_cookie_flag = (params[:remember_me] == "1")
+      #new_cookie_flag = (params[:remember_me] == "1")
+      new_cookie_flag = true
       handle_remember_cookie! new_cookie_flag
       redirect_to member_path
       flash[:notice] = "登录成功!"
