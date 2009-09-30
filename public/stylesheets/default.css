@@ -54,7 +54,7 @@ ul {
 #content #title {
   font-size: 36px; }
 #content .view_all_btn {
-  display: hide; }
+  display: none; }
 
 #footer {
   text-align: center;
