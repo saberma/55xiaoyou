@@ -14,6 +14,7 @@ ActionController::Routing::Routes.draw do |map|
   map.games_max '/games/max.:format', :controller => 'games', :action =>'max'
 
   map.home '/', :controller => 'home'
+  map.sitemap '/sitemap', :controller => 'home', :action => 'sitemap'
 
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'

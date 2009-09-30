@@ -45,25 +45,8 @@ describe SessionsController do
             it "authorizes me"               do do_create; controller.send(:authorized?).should be_true;   end    
             it "logs me in"                  do do_create; controller.send(:logged_in?).should  be_true  end    
             it "greets me nicely"            do do_create; response.flash[:notice].should =~ /登录成功!/i   end
-            it "sets/resets/expires cookie"  do controller.should_receive(:handle_remember_cookie!).with(want_remember_me); do_create end
-            it "sends a cookie"              do controller.should_receive(:send_remember_cookie!);  do_create end
             it 'redirects to the home page'  do do_create; response.should redirect_to('/member')   end
             it "does not reset my session"   do controller.should_not_receive(:reset_session).and_return nil; do_create end # change if you uncomment the reset_session path
-            if (has_request_token == :valid)
-              it 'does not make new token'   do @user.should_not_receive(:remember_me);   do_create end
-              it 'does refresh token'        do @user.should_receive(:refresh_token);     do_create end 
-              it "sets an auth cookie"       do do_create;  end
-            else
-              if want_remember_me
-                it 'makes a new token'       do @user.should_receive(:remember_me);       do_create end 
-                it "does not refresh token"  do @user.should_not_receive(:refresh_token); do_create end
-                it "sets an auth cookie"       do do_create;  end
-              else 
-                it 'does not make new token' do @user.should_not_receive(:remember_me);   do_create end
-                it 'does not refresh token'  do @user.should_not_receive(:refresh_token); do_create end 
-                it 'kills user token'        do @user.should_receive(:forget_me);         do_create end 
-              end
-            end
           end # inner describe
         end
       end

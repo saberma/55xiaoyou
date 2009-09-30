@@ -8,6 +8,8 @@
     url = login_path
   when "游戏列表"
     url = games_path
+  when "网站地图"
+    url = sitemap_path
   end
   raise 'visit url is blank' if url.blank?
   visit url
