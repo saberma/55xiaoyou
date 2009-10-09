@@ -11,6 +11,7 @@
 
 .span-6.last
   .shareit.float_right= render :partial => 'home/shareit', :locals => { :path => show_game_url(@game), :title => "好玩的在线小游戏:#{@game.name} 小游网", :show => "收藏分享这个游戏"}
+  .copy_this 点击复制地址，发送给朋友
   .wikistyle
     %h3 游戏说明
     .description

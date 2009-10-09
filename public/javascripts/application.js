@@ -16,4 +16,13 @@ $(document).ready(function(){
     li = $('<li/>').appendTo($('#history'));
     $('<a/>').html(name).attr('href', '/game/' + id).appendTo(li);
   });
+
+  //clipboard
+  clip = new ZeroClipboard.Client();
+  $('.copy_this').each(function(){
+    clip.setText(window.location.href);
+    clip.setHandCursor( true );
+    clip.setCSSEffects( true );
+    clip.glue(this);
+  });
 });

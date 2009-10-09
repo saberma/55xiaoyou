@@ -69,5 +69,8 @@ ul {
   #footer_side img {
     display: none; }
 
+.hover {
+  background-color: #cccccc; }
+
 .nav {
   float: right; }
