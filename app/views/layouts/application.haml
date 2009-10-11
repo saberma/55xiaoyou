@@ -26,14 +26,17 @@
       #footer.span-24
         .links
           友情链接:
-          =link_to "真心话网", "http://www.55true.com", :target=>"_blank"
-          =link_to "520网址之家", "http://abc.520.com", :target=>"_blank"
-          =link_to "滋味网", "http://www.ziwee.cn", :target=>"_blank"
-          =link_to "4399", "http://www.4399.net", :target=>"_blank"
-          =link_to "7k7k小游戏", "http://www.7k7k.com", :target=>"_blank"
-          =link_to "小游戏007", "http://www.yx007.com", :target=>"_blank"
-          =link_to "萱萱休闲吧", "http://www.xuanxuan.com", :target=>"_blank"
-          =link_to "在线小游戏", "http://www.xiaoyouxi.com", :target=>"_blank"
+          =render :partial => '/site/links'
+        .site
+          =link_to "关于本站", aboutus_path, :target=>"_blank"
+          |
+          =link_to "联系我们", contactus_path, :target=>"_blank"
+          |
+          =link_to "合作伙伴", partner_path, :target=>"_blank"
+          |
+          =link_to "免责声明", disclaimer_path, :target=>"_blank"
+          |
+          =link_to "网站地图", sitemap_path, :target=>"_blank"
         .copyright 
           copyright © 2009 
           %span><=link_to "小游网", home_path, :target=>"_blank"

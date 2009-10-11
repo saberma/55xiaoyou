@@ -14,7 +14,14 @@ ActionController::Routing::Routes.draw do |map|
   map.games_max '/games/max.:format', :controller => 'games', :action =>'max'
 
   map.home '/', :controller => 'home'
-  map.sitemap '/sitemap', :controller => 'home', :action => 'sitemap'
+
+  #site
+  map.aboutus '/aboutus', :controller => 'site', :action => 'aboutus'
+  map.contactus '/contactus', :controller => 'site', :action => 'contactus'
+  map.partner '/partner', :controller => 'site', :action => 'partner'
+  map.disclaimer '/disclaimer', :controller => 'site', :action => 'disclaimer'
+  map.sitemap '/sitemap', :controller => 'site', :action => 'map'
+
 
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'

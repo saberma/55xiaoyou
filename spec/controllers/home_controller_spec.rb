@@ -7,14 +7,4 @@ describe HomeController do
       response.should be_success
     end
   end
-
-  describe "GET 'sitemap'" do
-    it "should be successful" do
-      Factory(:cat_and_dog)
-      Factory(:gold)
-      get 'sitemap'
-      assigns[:list].size.should == 2
-      response.should be_success
-    end
-  end
 end

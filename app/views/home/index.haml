@@ -1,22 +1,4 @@
 .wikistyle
   %h3 为什么会有小游网?
   %div
-    :textile
-      如果你想在闲时玩个小游戏
-      玩腻了就换下一个，那么
-      本站就是为你而设计的
-
-      首页这里将只显示10秒
-      而后跳转至一个随机小游戏页面
-
-      Enjoy yourself !
-  :textile
-    想玩下一个游戏了? 
-    点击左上角的按钮!
   =link_to '', home_path, :class => :next
-  =link_to '查看所有', sitemap_path, :class => :view_all_btn
-
-:javascript
-  window.setTimeout(function(){
-    window.location = $('.next:first').attr('href');
-  }, 10000);

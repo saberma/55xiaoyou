@@ -1,0 +1,6 @@
+.span-24#site
+  %h1 网站地图
+  %h2 游戏列表
+  %ul#map
+    -@list.each do |g|
+      %li.dark=link_to g.name, show_game_path(g)

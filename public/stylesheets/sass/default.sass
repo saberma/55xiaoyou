@@ -2,11 +2,14 @@
 !front_color_light = #fff
 !border_color = #ccc
 !gray_color = #828282
+!blue_color = #1B7BAF
+!header_color = #e5ecf9
 
 body
   :margin 0
   :padding 0
   *
+    :font-family Helvetica,Tahoma,Verdana,"Lucida Grande",Arial,宋体,"Arial Unicode",sans-seriefHelvetica,Tahoma,Verdana,"Lucida Grande",Arial,宋体,"Arial Unicode",sans-serief
     :font-size 12px
 
 a
@@ -86,6 +89,20 @@ ul
   :padding 0 3px
 .hover
   :background-color = !border_color
+
+//site
+#site
+  h1
+    :margin 15px
+    :font-size 24px
+  h2
+    :margin-top 15px
+    :padding 5px
+    :background-color = !header_color
+  li
+    :width 100px
+  a
+    :color = !blue_color
 
 //member
 .nav

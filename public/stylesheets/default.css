@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0; }
   body * {
+    font-family: Helvetica,Tahoma,Verdana,"Lucida Grande",Arial,宋体,"Arial Unicode",sans-seriefHelvetica,Tahoma,Verdana,"Lucida Grande",Arial,宋体,"Arial Unicode",sans-serief;
     font-size: 12px; }
 
 a {
@@ -75,6 +76,18 @@ ul {
 
 .hover {
   background-color: #cccccc; }
+
+#site h1 {
+  margin: 15px;
+  font-size: 24px; }
+#site h2 {
+  margin-top: 15px;
+  padding: 5px;
+  background-color: #e5ecf9; }
+#site li {
+  width: 100px; }
+#site a {
+  color: #1b7baf; }
 
 .nav {
   float: right; }
