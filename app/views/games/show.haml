@@ -7,11 +7,14 @@
     %span#title=@game.name
     %span.tip 游戏说明在那==>
   =swf_tag @game.url, :id => 'game_bg', :width => 720, :height => 540
-  .tip 游戏文件较大，请等候
+  %div 游戏文件较大，请等候
 
 .span-6.last
-  .shareit.float_right= render :partial => 'home/shareit', :locals => { :path => show_game_url(@game), :title => "好玩的在线小游戏:#{@game.name} 小游网", :show => "收藏分享这个游戏"}
-  .copy_this 点击复制地址，发送给朋友
+  .shareit=render :partial => 'home/shareit', :locals => { :path => show_game_url(@game), :title => "好玩的在线小游戏:#{@game.name} 小游网", :show => "收藏分享这个游戏"}
+  .copy_this_tip 点击复制以下内容，发送给QQ/MSN好友
+  .copy_this
+    .pop==#{@game.name},这游戏太好玩了　
+    .url=show_game_url(@game)
   .wikistyle
     %h3 游戏说明
     .description

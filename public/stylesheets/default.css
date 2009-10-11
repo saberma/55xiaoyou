@@ -20,7 +20,7 @@ ul {
       color: #cccccc; }
 
 .tip {
-  color: #cccccc; }
+  color: #828282; }
 
 .center_text {
   text-align: center; }
@@ -38,9 +38,9 @@ ul {
   background: url(/images/next.png) repeat-x; }
 
 #toolbar {
-  height: 35px;
+  height: 30px;
   background: url(/images/toolbar-bg.png) repeat-x;
-  padding: 6px 8px; }
+  padding: 6px 8px 0 8px; }
   #toolbar .history_label {
     float: left;
     margin: 2px 2px 2px 30px;
@@ -52,22 +52,26 @@ ul {
     background: url(/images/logo.png) no-repeat; }
 
 #content #title {
-  font-size: 36px; }
+  font-size: 24px; }
 #content .view_all_btn {
   display: none; }
 
 #footer {
+  color: #828282;
   text-align: center;
-  margin-top: 20px; }
+  margin-top: 5px; }
   #footer div, #footer a {
-    margin: 5px; }
-
-#footer_side {
-  margin-top: 20px; }
-  #footer_side div {
-    margin: 2px; }
-  #footer_side img {
+    margin: 5px;
+    color: #828282; }
+  #footer img {
     display: none; }
+
+.copy_this_tip {
+  color: red; }
+
+.copy_this {
+  border: 1px solid #ccc;
+  padding: 0 3px; }
 
 .hover {
   background-color: #cccccc; }

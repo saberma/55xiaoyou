@@ -1,6 +1,7 @@
 !black_color = #000
 !front_color_light = #fff
 !border_color = #ccc
+!gray_color = #828282
 
 body
   :margin 0
@@ -26,7 +27,7 @@ ul
 
 //常用样式
 .tip
-  :color = !border_color 
+  :color = !gray_color
 
 .center_text
   :text-align center
@@ -46,9 +47,9 @@ ul
 
 //页面顶端工具条
 #toolbar
-  :height 35px
+  :height 30px
   :background url(/images/toolbar-bg.png) repeat-x
-  :padding 6px 8px
+  :padding 6px 8px 0 8px
   
   .history_label
     :float left
@@ -63,24 +64,26 @@ ul
 
 #content
   #title
-    :font-size 36px
+    :font-size 24px
   .view_all_btn
     :display none
 
 #footer
+  :color = !gray_color
   :text-align center
-  :margin-top 20px
+  :margin-top 5px
   div, a
     :margin 5px
-
-#footer_side
-  :margin-top 20px
-  div
-    :margin 2px
+    :color = !gray_color
   img
     :display none
 
 //clipboard
+.copy_this_tip
+  :color red
+.copy_this
+  :border 1px solid #ccc
+  :padding 0 3px
 .hover
   :background-color = !border_color
 

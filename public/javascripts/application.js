@@ -18,11 +18,10 @@ $(document).ready(function(){
   });
 
   //clipboard
+  ZeroClipboard.setMoviePath( '/ZeroClipboard.swf' );
   clip = new ZeroClipboard.Client();
   $('.copy_this').each(function(){
-    clip.setText(window.location.href);
-    clip.setHandCursor( true );
-    clip.setCSSEffects( true );
+    clip.setText($(this).text());
     clip.glue(this);
   });
 });
