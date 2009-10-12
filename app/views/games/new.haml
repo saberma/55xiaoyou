@@ -1,11 +1,13 @@
 .nav=link_to '返回列表', games_path
 =error_messages_for :game
 .span-18
-  -form_for @game do |f|
+  -form_for @game, :html => { :multipart => true } do |f|
     .label=f.label_require :name
     .input=f.text_field :name
     .label=f.label_require :url
     .input=f.text_field :url
+    .label=f.label :photo
+    .input=f.file_field :photo
     .label=f.label_require :description
     .input=f.text_area :description
 

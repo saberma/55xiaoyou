@@ -8,6 +8,7 @@ describe GamesController do
 
   it "should show game" do
     get :show, :id => @game.id
+    @game.reload.views.should == 1
     assigns[:game].should_not be_nil
   end
 

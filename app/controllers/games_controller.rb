@@ -1,7 +1,7 @@
 class GamesController < ApplicationController
   before_filter :check_login, :except => [:show, :max]
   caches_page :max
-  caches_page :show
+  #caches_page :show
 
   def index
     @page  = Game.paginate :page => params[:page]
@@ -14,6 +14,7 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find(params[:id])
+    @game.increment! :views
     @title = "#{@game.name} | #{@title}"
   end
 

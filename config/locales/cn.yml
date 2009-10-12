@@ -12,6 +12,7 @@ cn:
       game:
         name: "名称"
         url: "Flash地址"
+        photo: "缩略图"
         description: "说明"
 
     errors:

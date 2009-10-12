@@ -30,7 +30,7 @@ set :runner, nil
 
 #set :packages_for_project, %w(libxslt1-dev libxml2-dev memcached)
 #set :gems_for_project, %w(rspec hoe haml mislav-will_paginate mysql aslakhellesoy-cucumber webrat request-log-analyzer)
-set :shared_dirs, %w(public/swfs)
+set :shared_dirs, %w(public/photos public/swfs)
 
 namespace :deploy do
   task :restart, :roles => :app, :except => {:no_release => true } do

@@ -67,6 +67,25 @@ ul {
   #footer img {
     display: none; }
 
+#popular_list li {
+  width: 150px; }
+
+.thumbs {
+  width: 120px; }
+  .thumbs dt img {
+    display: block;
+    margin: 3px;
+    padding: 5px;
+    border: 1px #cccccc solid;
+    width: 120px;
+    height: 90px; }
+  .thumbs dd {
+    margin: 0;
+    text-align: center;
+    font-weight: bold; }
+    .thumbs dd a {
+      color: #1b7baf; }
+
 .copy_this_tip {
   color: red; }
 

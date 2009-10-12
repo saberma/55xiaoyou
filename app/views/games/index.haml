@@ -8,7 +8,7 @@
   %tbody
     -@page.each do |game|
       %tr
-        %td=game.name
+        %td=render :partial => '/games/thumbs', :locals => { :game => game }
         %td
           :textile
             #{game.description}

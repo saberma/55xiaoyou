@@ -10,6 +10,7 @@ Rails::Initializer.run do |config|
   config.gem 'mysql'
   config.gem 'haml'
   config.gem "RedCloth"
+  config.gem 'thoughtbot-paperclip', :lib => 'paperclip'
   config.gem 'mislav-will_paginate', :lib => 'will_paginate'
 
   config.gem 'thoughtbot-factory_girl', :lib => false

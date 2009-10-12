@@ -1,0 +1,5 @@
+%dl.thumbs
+  %dt=link_to image_tag(game.photo.url), show_game_path(game)
+  %dd
+    =link_to game.name, show_game_path(game)
+    .views==热度:#{game.views}

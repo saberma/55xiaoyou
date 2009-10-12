@@ -1,4 +1,10 @@
-.wikistyle
-  %h3 为什么会有小游网?
-  %div
-  =link_to '', home_path, :class => :next
+.span-18
+  %h2 最多人玩
+  %ul#popular_list
+    -@popular_list.each do |game|
+      %li=render :partial => '/games/thumbs', :locals => { :game => game }
+.span-6.last
+  %h2 其他人正玩
+  %ul#now_list
+    -@now_list.each do |game|
+      %li=render :partial => '/games/thumbs', :locals => { :game => game }
