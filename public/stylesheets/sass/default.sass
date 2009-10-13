@@ -1,5 +1,5 @@
 !black_color = #000
-!front_color_light = #fff
+!white_color = #fff
 !border_color = #ccc
 !gray_color = #828282
 !blue_color = #1B7BAF
@@ -39,6 +39,21 @@ ul
   :float right
 
 .float_left
+  :float left
+
+//游戏展示页面[其他人正玩]
+.bar
+  :background-color = !blue_color
+  :color = !white_color
+  :text-align center
+  :margin 10px 10px 10px 33px
+  :padding 5px
+  :font-weight bold
+
+.vertical
+  :padding 20px 5px
+  :margin 18px 0 0 10px
+  :width 16px
   :float left
 
 //下一个按钮
@@ -82,12 +97,17 @@ ul
     :display none
 
 //game thumbs
-#popular_list
+.thumbs_list
+  :margin-left 30px
   li
     :width 150px
 
+.now_list li
+  :width 75px
+
 .thumbs
-  :width 120px
+  :width 150px
+  :margin 0
   dt img
     :display block
     :margin 3px
@@ -101,6 +121,11 @@ ul
     :font-weight bold
     a
       :color = !blue_color
+  &.mini
+    :width 75px
+    dt img
+      :width 60px
+      :height 45px
 
 //clipboard
 .copy_this_tip

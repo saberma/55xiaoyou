@@ -10,6 +10,7 @@ describe GamesController do
     get :show, :id => @game.id
     @game.reload.views.should == 1
     assigns[:game].should_not be_nil
+    assigns[:now_list].should_not be_nil
   end
 
   it "should get games max id" do

@@ -5,7 +5,10 @@
   .center_text
     %span#title=@game.name
   =swf_tag @game.url, :id => 'game_bg', :width => 720, :height => 540
-  %div 游戏文件较大，请等候
+  %div
+    %div.float_left
+      游戏文件较大，请等候
+  
 
 .span-6.last
   .shareit=render :partial => 'home/shareit', :locals => { :path => show_game_url(@game), :title => "好玩的在线小游戏:#{@game.name} 小游网", :show => "收藏分享这个游戏"}
@@ -18,3 +21,7 @@
     .description
       :textile
         #{@game.description}
+  .bar.vertical 其他人正玩
+  %ul.now_list.float_right
+    -@now_list.each do |game|
+      %li=render :partial => '/games/thumbs', :locals => { :game => game, :style => :mini, :show_views => false }

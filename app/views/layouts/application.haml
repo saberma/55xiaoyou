@@ -28,18 +28,18 @@
           友情链接:
           =render :partial => '/site/links'
         .site
-          =link_to "关于本站", aboutus_path, :target=>"_blank"
+          =link_to "关于本站", aboutus_path
           |
-          =link_to "联系我们", contactus_path, :target=>"_blank"
+          =link_to "联系我们", contactus_path
           |
-          =link_to "合作伙伴", partner_path, :target=>"_blank"
+          =link_to "合作伙伴", partner_path
           |
-          =link_to "免责声明", disclaimer_path, :target=>"_blank"
+          =link_to "免责声明", disclaimer_path
           |
-          =link_to "网站地图", sitemap_path, :target=>"_blank"
+          =link_to "网站地图", sitemap_path
         .copyright 
           copyright © 2009 
-          %span><=link_to "小游网", home_path, :target=>"_blank"
+          %span><=link_to "小游网", home_path
           \. All Rights Reserved.
         - if production?
           =javascript_include_tag "http://js.users.51.la/3215065.js"

@@ -15,6 +15,13 @@ class GamesController < ApplicationController
   def show
     @game = Game.find(params[:id])
     @game.increment! :views
+    size = Game.all.size
+    ids = []
+    #todo:get random
+    3.times do
+      ids << (rand*size).ceil
+    end
+    @now_list = Game.find(ids)
     @title = "#{@game.name} | #{@title}"
   end
 

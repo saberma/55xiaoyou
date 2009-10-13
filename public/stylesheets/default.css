@@ -32,6 +32,20 @@ ul {
 .float_left {
   float: left; }
 
+.bar {
+  background-color: #1b7baf;
+  color: white;
+  text-align: center;
+  margin: 10px 10px 10px 33px;
+  padding: 5px;
+  font-weight: bold; }
+
+.vertical {
+  padding: 20px 5px;
+  margin: 18px 0 0 10px;
+  width: 16px;
+  float: left; }
+
 .next {
   float: left;
   height: 23px;
@@ -67,11 +81,17 @@ ul {
   #footer img {
     display: none; }
 
-#popular_list li {
-  width: 150px; }
+.thumbs_list {
+  margin-left: 30px; }
+  .thumbs_list li {
+    width: 150px; }
+
+.now_list li {
+  width: 75px; }
 
 .thumbs {
-  width: 120px; }
+  width: 150px;
+  margin: 0; }
   .thumbs dt img {
     display: block;
     margin: 3px;
@@ -85,6 +105,11 @@ ul {
     font-weight: bold; }
     .thumbs dd a {
       color: #1b7baf; }
+  .thumbs.mini {
+    width: 75px; }
+    .thumbs.mini dt img {
+      width: 60px;
+      height: 45px; }
 
 .copy_this_tip {
   color: red; }
