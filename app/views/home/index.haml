@@ -9,7 +9,7 @@
   .copy_this
     .pop==发现一个很多精选小游戏的地方
     .url=home_url
-  .bar.vertical 其他人正玩
+  .bar.vertical 其他人在玩
   %ul.now_list
     -@now_list.each do |game|
       %li=render :partial => '/games/thumbs', :locals => { :game => game, :style => :mini, :show_views => false }
