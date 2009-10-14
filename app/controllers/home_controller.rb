@@ -3,12 +3,6 @@ class HomeController < ApplicationController
 
   def index
     @popular_list = Game.popular
-    size = Game.all.size
-    ids = []
-    #todo:get random
-    3.times do
-      ids << (rand*size).ceil
-    end
-    @now_list = Game.find(ids)
+    @now_list =  Rails.cache.fetch("now_list"){ Game.limit(5).popular }.take(4)
   end
 end

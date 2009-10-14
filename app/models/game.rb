@@ -19,6 +19,9 @@ class Game < ActiveRecord::Base
   validates_attachment_size :photo, :less_than => 1.megabytes
 
   named_scope :popular, :limit => 12, :order => "views desc"
+  named_scope :limit, lambda {|limit|
+    {:limit => limit}
+  }
 
   def self.per_page
     20

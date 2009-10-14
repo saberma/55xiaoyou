@@ -15,13 +15,11 @@ class GamesController < ApplicationController
   def show
     @game = Game.find(params[:id])
     @game.increment! :views
-    size = Game.all.size
-    ids = []
-    #todo:get random
-    3.times do
-      ids << (rand*size).ceil
+    @now_list =  Rails.cache.fetch("now_list"){ Game.limit(5).popular }
+    unless @now_list.include?(@game)
+      (@now_list += []).unshift(@game).pop
+      Rails.cache.write("now_list", @now_list)
     end
-    @now_list = Game.find(ids)
     @title = "#{@game.name} | #{@title}"
   end
 
