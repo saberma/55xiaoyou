@@ -1,6 +1,6 @@
 %dl.thumbs{:class => style.to_s, :title => game.name}
   %dt=link_to image_tag(game.photo.url(style), :class => style), show_game_path(game)
   %dd
-    =link_to truncate(game.name, (style == :normal)?14:8), show_game_path(game)
+    =link_to truncate(game.name, :omission => '', :length => (style == :normal)?11:5), show_game_path(game)
     - if show_views
       .views==热度:#{game.views}

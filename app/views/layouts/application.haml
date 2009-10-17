@@ -43,8 +43,18 @@
           copyright © 2009 
           %span><=link_to "小游网", home_path
           \. All Rights Reserved.
+        :javascript
+          $.ready();
         - if production?
           =javascript_include_tag "http://js.users.51.la/3215065.js"
           %noscript
             %a{:href=>"http://www.51.la/?3215065", :target=>"_blank"}
               %img{:alt=>"&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;", :src=>"http://img.users.51.la/3215065.asp", :style=>"border:none"}
+          :javascript
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          :javascript
+            try {
+              var pageTracker = _gat._getTracker("UA-5044311-2");
+              pageTracker._trackPageview();
+            }catch(err) {}
