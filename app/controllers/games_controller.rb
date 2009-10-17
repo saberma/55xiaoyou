@@ -40,13 +40,12 @@ class GamesController < ApplicationController
       )
     )
     if @game.errors.empty?
-      flash[:notice] = '新增成功!可以继续新增!'
-      redirect_to new_game_path
+      flash[:notice] = '新增成功!'
       expire_page :action => :max, :format => :js
     else
       flash[:error] = '新增出错!'
-      render :action => :new
     end
+    render :action => :new
   end
 
   def update
