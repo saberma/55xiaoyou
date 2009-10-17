@@ -5,6 +5,10 @@
       %li=render :partial => '/games/thumbs', :locals => { :game => game , :style => :normal, :show_views => true}
 .span-6.last
   .shareit=render :partial => 'home/shareit', :locals => { :path => home_url, :title => @title, :show => "收藏分享小游网"}
+  .bar.vertical 最新小游戏
+  %ul
+    -@latest_list.each do |game|
+      %li=render :partial => '/games/thumbs', :locals => { :game => game, :style => :mini, :show_views => false }
   .copy_this_tip 点击复制以下内容，发送给QQ/MSN好友
   .copy_this
     .pop==发现一个很多精选小游戏的地方
