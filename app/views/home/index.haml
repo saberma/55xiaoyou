@@ -5,20 +5,11 @@
       %li=render :partial => '/games/thumbs', :locals => { :game => game , :style => :normal, :show_views => true}
 .span-6.last
   %form#cse-search-box{:action=>"http://www.google.com/cse"}
-    =hidden_field_tag :cs, "002330314085641571200"
+    =hidden_field_tag :cx, "002330314085641571200:s7qc2tc1cos"
     =hidden_field_tag :ie, "UTF-8"
-    =text_field_tag :q, nil, :size=>31
-    =submit_tag "搜索", :name=>:sa
-  =javascript_include_tag "http://www.google.com/cse/brand?form=cse-search-box&lang=zh-Hans"
-
-  //Google Custom Search Element
-  #cse{:style=>"width:100%"} Loading
-  =javascript_include_tag "http://www.google.com/jsapi"
-  :javascript
-    google.load('search', '1');
-    google.setOnLoadCallback(function(){
-      new google.search.CustomSearchControl('002330314085641571200:s7qc2tc1cos').draw('cse');
-    }, true);
+    =text_field_tag :q, nil, :size=>15
+    =submit_tag "搜索小游戏", :name=>:sa
+  %javascript{:src=>'http://www.google.com/cse/brand?form=cse-search-box&lang=zh-Hans', :type=>"text/javascript"}
   .shareit=render :partial => 'home/shareit', :locals => { :path => home_url, :title => @title, :show => "收藏分享小游网"}
   .bar.vertical 最新小游戏
   %ul
