@@ -4,7 +4,11 @@
 .span-18
   .center_text
     %span#title=@game.name
-  =swf_tag @game.url, :id => 'game_bg', :width => 720, :height => 540
+  -#支持植物大战僵尸
+  -if @game.url.end_with?(".html")
+    %iframe{:border=>0, :marginwidth=>0, :marginheight=>0, :src=>@game.url, :frameborder=>0, :width=>720, :height=>540, :scrolling=>"no", :allowtransparency=>"allowtransparency"}
+  -else
+    =swf_tag @game.url, :id => 'game_bg', :width => 720, :height => 540
   %div
     %div.float_left
       游戏文件较大，请等候

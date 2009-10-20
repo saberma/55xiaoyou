@@ -1,7 +1,7 @@
 class Swf
   def self.get
     Game.all(:conditions => ["url like ?", "http%"]).each do |g|
-      unless g.url =~ /#remote$/
+      unless g.url =~ /\.html|#remote$/
         url = URI.parse(g.url).path
         filename = url[(url.rindex('/')+1)..url.size]
         full_filename = File.join(RAILS_ROOT, "public", "swfs", filename)
