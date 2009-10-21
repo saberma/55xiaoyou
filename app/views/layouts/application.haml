@@ -25,8 +25,7 @@
           =content_tag :div, msg, :id => "flash-#{key}"
         =yield
       #footer.span-24
-        .links
-          友情链接:
+        .links.span-24
           =render :partial => '/site/links'
         .site
           =link_to "首页", home_path
